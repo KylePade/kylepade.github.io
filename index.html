@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="cn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 20px;
-        }
+        }π
         h1 {
             font-size: 24px;
         }
@@ -31,28 +31,21 @@
 </head>
 <body>
     <header>
-        <h1>欢迎来到我的博客</h1>
+        <h1>欢迎来到少年沛的自留地</h1>
     </header>
 
     <nav>
         <h2>博客目录</h2>
         <ul>
-            {% for post in site.posts %}
             <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
+                <a href="_posts/demo.md">{{ post.title }}</a>
             </li>
-            {% endfor %}
         </ul>
     </nav>
 
     <main>
         <h2>最新博客文章</h2>
-        {% for post in site.posts limit:3 %}
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.date | date: "%Y年%m月%d日" }}</p>
-        {{ post.content }}
         <hr>
-        {% endfor %}
     </main>
 
     <footer>
